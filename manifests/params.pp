@@ -29,10 +29,10 @@ class puppet::params{
 
 
   case $::osfamily {
-    Debian:{
+    'Debian': {
       # Do nothing
     }
-    default:{
+    default: {
       fail("The NeSI Puppet Puppet module does not support ${::osfamily} family of operating systems")
     }
   }
