@@ -306,6 +306,8 @@ class puppet::master (
     ssl_key           => "${::puppet::ssl_dir}/private_keys/${servername}.pem",
     ssl_ca            => "${::puppet::ssl_dir}/certs/ca.pem",
     ssl_chain         => "${::puppet::ssl_dir}/certs/ca.pem",
+    ssl_crl           => "${::puppet::ssl_dir}/crl.pem",
+    ssl_crl_check     => "chain",
     rack_base_uris    => ['/'],
     request_headers   =>  [
                             'unset X-Forwarded-For',
