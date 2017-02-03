@@ -195,6 +195,7 @@ class puppet::master (
     path        => '/certificate_revocation_list/ca',
     description => 'allow all nodes to access the certificates services',
     methods     => 'find',
+    auth        => 'any',
     allows      => '*',
     order       => 'A300',
   }
